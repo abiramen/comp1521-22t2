@@ -10,7 +10,10 @@ int main(void) {
     return 0;
 }
 
+// calculates n!
 int factorial(int n) {
-    // todo
-    return -1;
+    
+    if (n <= 0) return 1; 
+    // recursive case
+    return factorial(n - 1) * n;
 }
