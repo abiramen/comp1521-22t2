@@ -7,6 +7,12 @@ int main(void) {
         printf("%d\n", i);
         i++; /* increment */
     }
+
+
+    for (int j = 1; j <= 10; j++) {
+        printf("%d\n', j);
+    }
+
     printf("%d\n", i);
     
    return 0;
