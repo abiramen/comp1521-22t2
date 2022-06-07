@@ -9,10 +9,24 @@ int main(void) {
     scanf("%d", &n);
 
     int fac = 1;
-    for (int i = 1; i <= n; i++) {
-        fac *= i;
-    }
 
-    printf("n! = %d\n", fac);
+main__loop_i_to_n:
+
+main__loop_i_to_n_init:
+    int i = 1;
+
+main__loop_i_to_n_cond:
+    if (i > n) goto main__loop_i_to_n_end;
+
+main__loop_i_to_n_body:
+    fac *= i;
+main__loop_i_to_n_step:
+    i++;
+    goto main__loop_i_to_n_cond;
+
+main__loop_i_to_n_end:
+    printf("n! = ");
+    printf("%d", fac);
+    putchar('\n');
     return 0;
 }
