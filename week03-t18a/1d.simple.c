@@ -4,11 +4,19 @@
 int main(void) {
     char array[N_ELEMENTS] = {'h', 'e', 'l', 'l', 'o'};
 
-    for (int i = 0; i < N_ELEMENTS; i++) {
-        putchar(array[i]);
-        putchar('\n');
-    }
-
+main__loop_i_to_5:
+main__loop_i_to_5_init:
+    int i = 0;
+main__loop_i_to_5_cond:
+    if (i >= N_ELEMENTS) goto main__loop_i_to_5_end;
+main__loop_i_to_5_body:
+    putchar(array[i]);
+    // *(array + i)
+    putchar('\n');
+main__loop_i_to_5_step:
+    i++;
+    goto main__loop_i_to_5_cond;
+main__loop_i_to_5_end:
     return 0;
 }
 
