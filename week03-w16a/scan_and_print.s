@@ -31,7 +31,7 @@ main__loop_i_to_10__print_body:
         li      $v0, 1
         mul     $t1, $t0, 4                     # 4 * i
         lw      $a0, numbers($t1)
-        syscall                                 # putchar(numbers[i]);
+        syscall                                 # printf("%d", numbers[i]);
 
         li      $v0, 11
         li      $a0, ' '
