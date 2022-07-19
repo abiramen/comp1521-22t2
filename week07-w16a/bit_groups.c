@@ -18,6 +18,17 @@ middle six bits are 101010
 // TODO
 six_bit_groups_t get_bit_groups(uint32_t value) {
 
+    uint8_t mask = 0x3f;
+
+    // six_bit_groups_t result;
+    // result.lower_bits = value & mask;
+    // result.middle_bits = (value >> 13) & mask;
+    
+    six_bit_groups_t result = {
+        .lower_bits = value & mask,
+        .upper_bits = (value >> 13) & mask
+    };
+
     return result;
 }
  
