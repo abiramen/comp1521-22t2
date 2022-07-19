@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 
     // read in bytes from stdin
     int c;
-    while ((c = getchar()) != EOF || c != '\n') {
+    while ((c = getchar()) != EOF && c != '\n') {
         // write the byte to the file
         fputc(c, stream);
     }
